@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Carga Crítica Máxima</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="background">
+        <!-- Aquí colocamos la animación de fondo -->
+        <div class="ring">
+            <i style="--clr:#00ff0a;"></i>
+            <i style="--clr:#ff0057;"></i>
+            <i style="--clr:#fffd44;"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Calculadora de Carga Crítica Máxima</h1>
+        <div class="formula">\( P_{cr} = \frac{\pi^2 \cdot E \cdot I}{(KL)^2} \)</div>
+        <div class="input-group">
+            <label for="E">E (Módulo de Elasticidad):</label>
+            <input type="number" id="E" name="E">
+        </div>
+        <div class="input-group">
+            <label for="I">I (Momento de Inercia):</label>
+            <input type="number" id="I" name="I">
+        </div>
+        <div class="input-group">
+            <label for="K">K (Factor de Longitud Efectiva):</label>
+            <input type="number" id="K" name="K">
+        </div>
+        <div class="input-group">
+            <label for="L">L (Longitud):</label>
+            <input type="number" id="L" name="L">
+        </div>
+        <div class="button-group">
+            <button id="calculate">Calcular</button>
+            <button id="reset">Restablecer</button>
+            <button id="toggleMode">Modo Oscuro/Claro</button>
+            <button id="changeLanguage">Cambiar Idioma</button>
+            <button id="explainVariables">Explicar Variables</button>
+        </div>
+        <div id="plot"></div>
+        <div id="result"></div>
+        <div id="conclusion"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
